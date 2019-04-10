@@ -1,0 +1,51 @@
+.nav_tag {
+    width: 100vw;
+    /* border: solid black .5px; */
+    display: flex;
+    align-items: center;
+    border-bottom: solid black .5px;
+}
+
+.header_navBar {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.natgeo_logo {
+    height: 50px;
+    border-radius: 50px;
+    margin: 10px;
+}
+
+.title_span {
+    /* border: solid black .5px; */
+    font-size: 24px;
+    text-transform: capitalize;
+    width: 270px;
+    text-align: left;
+    font-weight: 500;
+    letter-spacing: .5px;
+}
+
+.NavLinks {
+    display: flex;
+    justify-content: space-between;
+    /* border: solid black .5px;  */
+    width: 100%;
+    margin: 3px;
+    list-style-type: none;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-right: 25px;
+    height: 45px;
+    align-items: flex-end;
+    letter-spacing: 1px;
+    padding-right: 15px;
+}
+
+li {
+    cursor: pointer;
+}

@@ -23,7 +23,7 @@ class Inventory extends Component {
         console.log('what is state', this.state.fullInventory)
         let showFullInventory = this.state.fullInventory.map((el, i, arr) => {
             return (
-                <div key={i}> 
+                <div className="singleAnimal" key={i}> 
                     <h4> {el.name} </h4>
                     <div> 
                         <img className="img_inventory" src={el.image} alt="animal" /> 
@@ -34,7 +34,7 @@ class Inventory extends Component {
         })
         console.log('showfull', showFullInventory)
         return (
-            <div> 
+            <div className="full_divForInventory"> 
                 {showFullInventory}
             </div>
         )

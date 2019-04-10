@@ -1,3 +1,15 @@
 .img_inventory {
     height: 200px;
 }
+
+.singleAnimal {
+    border: solid black .5px;
+    padding: 5px;
+    /* margin: 10px; */
+}
+
+.full_divForInventory {
+    background-color: darkgray;
+    margin: 0;
+    padding: 0;
+}
