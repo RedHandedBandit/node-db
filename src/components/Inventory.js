@@ -12,7 +12,6 @@ class Inventory extends Component {
 
     componentDidMount(){
         axios.get('http://localhost:3000/api/animalInventory').then( res => {
-            console.log(res)
             this.setState({
                 fullInventory: res.data.allAnimals
             })
@@ -20,7 +19,6 @@ class Inventory extends Component {
     }
 
     render(){
-        console.log('what is state', this.state.fullInventory)
         let showFullInventory = this.state.fullInventory.map((el, i, arr) => {
             return (
                 <div className="singleAnimal" key={i}> 
@@ -28,11 +26,10 @@ class Inventory extends Component {
                     <div> 
                         <img className="img_inventory" src={el.image} alt="animal" /> 
                     </div>
-                    <button> ADD </button>
+                    <button onClick={() => this.props.addToList(el)} > ADD </button>
                 </div>
             )
         })
-        console.log('showfull', showFullInventory)
         return (
             <div className="full_divForInventory"> 
                 {showFullInventory}

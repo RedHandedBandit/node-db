@@ -2,6 +2,11 @@
   text-align: center;
   margin: 0;
   padding: 0;
+  background-image: url('./assests/amazon-branches-dawn-975771.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .App-logo {

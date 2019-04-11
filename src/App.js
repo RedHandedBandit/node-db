@@ -8,7 +8,8 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      showYourList: false
+      showYourList: false,
+      ownList: []
     }
   }
 
@@ -19,14 +20,20 @@ class App extends Component {
       this.setState({showYourList: false})
     }
   }
+
+  addToList = (item) => {
+    console.log(this.state.ownList)
+    this.setState({ownList: [...this.state.ownList, item]})
+  }
+
   render() {
-    const {showYourList} = this.state
+    const {showYourList, ownList} = this.state
     return (
       <div className="App">
         <NavBar yourList={this.yourList} />
         {showYourList ? 
-          <YourList /> : 
-            <Inventory /> 
+          <YourList ownList={ownList} /> : 
+            <Inventory addToList={this.addToList} /> 
             }
         
         

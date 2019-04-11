@@ -1,15 +1,24 @@
 .img_inventory {
-    height: 200px;
+    height: 250px;
+    border-radius: 5px;
+    border: solid black .8px;
 }
 
 .singleAnimal {
     border: solid black .5px;
-    padding: 5px;
-    /* margin: 10px; */
+    margin: 15px;
+    background-color: rgb(255, 255, 255, .6);
+    width: 450px;
 }
 
 .full_divForInventory {
-    background-color: darkgray;
-    margin: 0;
-    padding: 0;
+    display: flex;
+	/* flex-direction: column; */
+	flex-wrap: wrap;
+    justify-content: space-around;
 }
+
+/* .singleAnimal:hover {
+    cursor: pointer;
+    border: solid green 5px;
+} */
