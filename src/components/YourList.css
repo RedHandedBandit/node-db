@@ -12,7 +12,7 @@
     background-color: rgb(255, 255, 255, .6);
     border: solid black;
     width: 45%;
-    height: 600px;
+    /* height: 600px; */
     display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -59,10 +59,20 @@
     align-content: space-around;
 }
 
+.firstThree {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: solid black .5px;
+    width: 45%;
+    position: relative
+    
+}
+
 .bp_span {
     display: flex;
     font-size: 18px;
-    width: 50%;
+    width: 200px;
     border: solid black .5px;
     text-align: left;
 }

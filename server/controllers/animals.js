@@ -1,5 +1,5 @@
 let id = 1
-let allAnimals = [
+let dataOfAnimals = [
     {
         id: id++,
         name: 'Bengal Tiger',
@@ -197,5 +197,5 @@ let allAnimals = [
 ]
         
 module.exports = {
-    allAnimals
+    dataOfAnimals
 }

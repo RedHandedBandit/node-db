@@ -13,7 +13,7 @@ class Inventory extends Component {
     componentDidMount(){
         axios.get('http://localhost:3000/api/animalInventory').then( res => {
             this.setState({
-                fullInventory: res.data.allAnimals
+                fullInventory: res.data.dataOfAnimals
             })
         })
     }
