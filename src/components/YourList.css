@@ -1,43 +1,40 @@
+.fullCard {
+    background-color: rgb(255, 255, 255, .8);
+    width: 500px;
+    margin: 15px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+.img_yourList {
+    height: 135px;
+    border-radius: 1200px;
+}
+
 .divReturning_yourList {
     display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: flex-start;
 	align-items: center;
-    align-content: stretch;
-    background: none;
-}
-
-.fullCard {
-    background-color: rgb(255, 255, 255, .6);
-    border: solid black;
-    width: 45%;
-    /* height: 600px; */
-    display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	align-items: flex-start;
-	align-content: center;
+	align-content: space-around;
 }
 
 .header_yourList {
-    border: solid;
-    padding: 10px;
     display: flex;
-    width: 95%
-}
-
-.img_yourList {
-    height: 150px;
-    border-radius: 50%;
+    /* border: solid black .5px; */
+    margin: 5px;
 }
 
 .name_status {
-    border: solid green;
-    width: 100%;
+    /* border: solid black .5px; */
     text-align: left;
-    padding-left: 10px;
+    padding-left: 11px;
 }
 
 .status {
@@ -46,45 +43,66 @@
 }
 
 .bulletsPoints_yourList {
-    border: solid;
-    width: 95%;
-    height: 120px;
-    margin: 5px;
+    border: solid black .5px;
     padding: 5px;
     display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-    align-content: space-around;
+    height: 150px;
 }
 
 .firstThree {
+    border: solid black .5px;
+    padding: 5px;
+    margin: 4px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    border: solid black .5px;
-    width: 45%;
-    position: relative
-    
-}
-
-.bp_span {
-    display: flex;
-    font-size: 18px;
-    width: 200px;
-    border: solid black .5px;
+    width: 500px;
     text-align: left;
+    justify-content: space-around;
 }
 
-.info_div {
-    border: solid;
+.secondThree {
+    border: solid black .5px;
+    padding: 5px;
+    margin: 4px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    text-align: left;
+    justify-content: space-around;
 }
 
-.info_pContainer {
-    border: solid green;
+.height {
+    font-size: 17px;
+    background: none;
+    font-weight: 600;
 }
 
-.all_btns {
-    border: solid
+.weight {
+    font-size: 17px;
+    background: none;
+    font-weight: 600;
+}
+
+.length {
+    font-size: 17px;
+    background: none;
+    font-weight: 600;
+}
+
+.population {
+    font-size: 17px;
+    background: none;
+    font-weight: 600;
+}
+
+.habitat {
+    font-size: 17px;
+    background: none;
+    font-weight: 600;
+}
+
+.diet {
+    font-size: 17px;
+    background: none;
+    font-weight: 600;
 }

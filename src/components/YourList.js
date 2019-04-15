@@ -43,14 +43,14 @@ class YourList extends Component {
                     </header>
                     <div className="bulletsPoints_yourList"> 
                         <div className="firstThree"> 
-                            <span className="bp_span"> Height: {el.height} </span>
-                            <span className="bp_span"> Weight: {el.weight} </span>
-                            <span className="bp_span"> Length: {el.length} </span>
+                            <span className="bp_span"> <mark className="height">Height:</mark> {el.height} </span>
+                            <span className="bp_span"> <mark className="weight">Weight:</mark> {el.weight} </span>
+                            <span className="bp_span"> <mark className="length">Length:</mark> {el.length} </span>
                         </div>
                         <div className="secondThree"> 
-                            <span className="bp_span"> Population: {el.population} </span>
-                            <span className="bp_span"> Habitat: {el.habitat} </span>
-                            <span className="bp_span"> Diet: {el.food} </span>
+                            <span className="bp_span"> <mark className="population">Population:</mark> {el.population} </span>
+                            <span className="bp_span"> <mark className="habitat">Habitat:</mark> {el.habitat} </span>
+                            <span className="bp_span"> <mark className="diet">Diet:</mark> {el.food} </span>
                         </div>
                     </div>
                     <div className="info_div" >
