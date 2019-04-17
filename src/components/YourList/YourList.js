@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './YourList.css'
 import Video from './Video/Video'
+import SingleCard from './SingleCard/SingleCard'
 
 class YourList extends Component {
     constructor(props){
@@ -35,62 +36,17 @@ class YourList extends Component {
     
     
     render(){
-        console.log('handleDeleteClick', this.handleDeleteClick)
         let yourList = this.props.ownList.map((el, i) => {
-            console.log('el.id', el.id)
-            return (
-                <div className="fullCard" key={i}> 
-                    <header className="header_yourList"> 
-                        <img className="img_yourList" src={el.image} alt="animal" />
-                        <div className="name_status"> 
-                            <h2> {el.name} </h2>
-                            <span> Status: 
-                                <mark className="status"> {el.status} </mark> 
-                            </span>
-                        </div>
-                    </header>
-                    <div className="bulletsPoints_yourList"> 
-                        <div className="firstThree"> 
-                            <span className="bp_span"> <mark className="height">Height:</mark> {el.height} </span>
-                            <span className="bp_span"> <mark className="weight">Weight:</mark> {el.weight} </span>
-                            <span className="bp_span"> <mark className="length">Length:</mark> {el.length} </span>
-                        </div>
-                        <div className="secondThree"> 
-                            <span className="bp_span"> <mark className="population">Population:</mark> {el.population} </span>
-                            <span className="bp_span"> <mark className="habitat">Habitat:</mark> {el.habitat} </span>
-                            <span className="bp_span"> <mark className="diet">Diet:</mark> {el.food} </span>
-                        </div>
-                    </div>
-                    <div className="info_div" >
-                        Things to Know about the {el.name}
-                        <p className="info_pContainer"> 
-                            {el.info}
-                        </p>
-                    </div>
-                    <footer className="all_btns" > 
-                        {!this.state.editInfo ?
-                            <button onClick={() => this.handleEditInfoClick()}> EDIT </button> :
-                            <div> 
-                                <textarea 
-                                    onChange={(e) => this.updateAnimalClick(e.target.value)}
-                                    />
-                                <button 
-                                    onClick={() => this.props.submitNewAnimalInfo(el.id, this.state.updateInfo)}
-                                    > 
-                                        SUBMIT 
-                                </button>
-                            </div>
-                        }
-                        <button onClick={() => this.setState({
-                            video: !this.state.video
-                        })}> PLAY </button>
-                            <button onClick={() => this.handleDeleteClick(el.id)}> 
-                                    DELETE 
-                            </button> 
-                    </footer>
-                    {this.state.video ? <Video video={el.video} /> : null}
-                </div>
-            )
+           return (
+            <SingleCard key={i} name={el.name} status={el.status} id={el.id}
+                population={el.population} weight={el.weight} 
+                height={el.height} length={el.length} habitat={el.habitat}
+                info={el.info} food={el.food} image={el.image} video={el.video}
+                editInfo={this.state.editInfo} updateInfo={this.state.updateInfo} 
+                videoState={this.state.video} 
+                handleEditInfoClick={this.handleEditInfoClick} updateAnimalClick={this.updateAnimalClick}
+                handleDeleteClick={this.handleDeleteClick} playClick={this.playClick} />
+           )
         })
         return (
             <div className="divReturning_yourList"> 
