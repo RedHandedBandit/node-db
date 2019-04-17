@@ -6,13 +6,20 @@ class SingleCard extends Component {
     constructor(props){
         super(props)
         this.state = {
-            video: false
+            video: false,
+            textArea: this.props.info
         }
     }
 
     handleClosePopup = () => {
         this.setState({
             video: !this.state.video
+        })
+    }
+
+    textChange= (val) => {
+        this.setState({
+            textArea: val
         })
     }
 
@@ -53,10 +60,11 @@ class SingleCard extends Component {
                             onClick={() => this.props.handleEditInfoClick()}> EDIT </button> :
                         <div> 
                             <textarea 
-                                onChange={(e) => this.props.updateAnimalClick(e.target.value)}
+                                value={this.state.textArea}
+                                onChange={(e) => this.textChange(e.target.value)}
                                 />
                             <button className="submitBtn"
-                                onClick={() => this.props.submitNewAnimalInfo(this.props.id, this.props.updateInfo)}
+                                onClick={() => this.props.submitNewAnimalInfo(this.props.id, this.state.textArea)}
                                 > 
                              SUBMIT 
                             </button>

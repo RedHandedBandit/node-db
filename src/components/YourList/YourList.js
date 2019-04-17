@@ -42,10 +42,11 @@ class YourList extends Component {
                 population={el.population} weight={el.weight} 
                 height={el.height} length={el.length} habitat={el.habitat}
                 info={el.info} food={el.food} image={el.image} video={el.video}
-                editInfo={this.state.editInfo} updateInfo={this.state.updateInfo} 
+                editInfo={this.state.editInfo} updateInfo={el.info} 
                 videoState={this.state.video} 
                 handleEditInfoClick={this.handleEditInfoClick} updateAnimalClick={this.updateAnimalClick}
-                handleDeleteClick={this.handleDeleteClick} playClick={this.playClick} />
+                handleDeleteClick={this.handleDeleteClick} playClick={this.playClick} submitNewAnimalInfo={this.props.submitNewAnimalInfo}
+                />
            )
         })
         return (

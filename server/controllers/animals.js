@@ -207,6 +207,21 @@ let dataOfAnimals = [
         food: 'processed dog food and bird wings',
         image: 'https://www.thesprucepets.com/thmb/skYeQH255WxPaNzYWREDRfLgqFQ=/450x0/filters:no_upscale():max_bytes(150000):strip_icc()/golden-retriever-sitting-down-in-a-farm-837898820-5c7854ff46e0fb00011bf29a.jpg',
         video: 'https://www.youtube.com/embed/jk7lsBucZ6o'
+    },
+    {
+        id: id++,
+        name: 'Sumatran Orangutan',
+        status: 'Critically Endangered',
+        population: '14,600',
+        height: 'N/A',
+        weight: '66 - 198 lbs',
+        length: '4 - 5 ft',
+        habitat: 'Tropical and Subtropical Moist Broadleaf forests',
+        info: `The Sumatran orangutan is almost exclusively living among the trees of tropical rainforests. Females virtually never travel on the ground and adult males do so rarely. This has been attributed to mass fruit on fig trees, where groups of Sumatran orangutans can come together to feed. Adult males are typically solitary while females are accompanied by offspring.
+        Historically, the Sumatran orangutan was distributed over the entire island of Sumatra and further south into Java. The species' range is now restricted to the north of the island with a majority in the provinces of North Sumatra and Aceh. Only three populations contain more than 1,000 orangutans. Orangutans that were confiscated from the illegal trade or as pets are being reintroduced to Bukit Tigapuluh National Park. They number around 70 and are reproducing.`,
+        food: 'Fruit and Plant Diet',
+        image: 'https://i.ndtvimg.com/i/2018-02/orangutan-afp_650x400_51519028604.jpg',
+        video: 'https://www.youtube.com/embed/xVsFoqow7do'
     }
 ]
         

@@ -8,7 +8,7 @@ app.use(express.json())
 app.get('/api/animalInventory', Ctrl.getallAnimalsInventory)
 app.put('/api/info/:id', Ctrl.updateInfo)
 app.post('/api/myList/:id', Ctrl.addIDToMyList)
-app.delete('/api/deleteAnimal/:id', Ctrl.deleteAnimalObj)
+app.delete('/api/animal/:id', Ctrl.deleteAnimalObj)
 
 const port = 4000
 app.listen(port, console.log(`if you are quiet you can hear port ${port}`))

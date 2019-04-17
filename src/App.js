@@ -56,7 +56,7 @@ class App extends Component {
       console.log('deleteAnimal id', id)
       let copyOfList = this.state.ownList.slice()
       copyOfList.splice()
-      axios.delete(`/api/deleteAnimal/${id}`).then( res =>
+      axios.delete(`/api/animal/${id}`).then( res =>
         this.deleteInfo(res.data)
         )
         .catch(error => console.log('error found ma doode', error))

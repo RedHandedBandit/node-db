@@ -41,3 +41,20 @@
     cursor: pointer;
     transition-duration: .4s;
 }
+
+.searchBar {
+    /* border: solid black; */
+    width: 100vw;
+    height: 35px;
+    margin-bottom: 20px;
+}
+
+.searchInput {
+    border: solid black .5px;
+    text-align: center;
+    width: 370px;
+    height: 20px;
+    margin-top: 10px;
+    border-radius: 1200px;
+    background-color: rgb(255, 255, 255, .6);
+}

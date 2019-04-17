@@ -29,7 +29,7 @@
 
 .header_yourList {
     display: flex;
-    /* border: solid black .5px; */
+    border: solid black .5px;
     margin: 5px;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .bulletsPoints_yourList {
-    /* border: solid black 1px; */
+    border: solid black 1px;
     padding: 5px;
     display: flex;
     height: 150px;

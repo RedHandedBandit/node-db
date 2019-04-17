@@ -6,7 +6,8 @@ class Inventory extends Component {
     constructor(){
         super()
         this.state = {
-            fullInventory: []
+            fullInventory: [],
+            text: ''
         }
     }
 
@@ -18,20 +19,38 @@ class Inventory extends Component {
         })
     }
 
+    handleSearch = (val) => {
+        this.setState({
+            text: val
+        })
+    }
+
     render(){
-        let showFullInventory = this.state.fullInventory.map((el, i, arr) => {
+        let showFullInventory = this.state.fullInventory.filter((el) => {
+            return el.name.includes(this.state.text)
+        }).map((el, i) => {
             return (
-                <div className="singleAnimal" key={i}> 
+                <div className="singleAnimal"> 
                     <h4> {el.name} </h4>
-                    <div> 
-                        <img className="img_inventory" src={el.image} alt="animal" /> 
+                    <div>
+                        <img className="img_inventory" src={el.image} alt="animal" />
                     </div>
-                    <button className="addBtn" onClick={() => this.props.addToList(el)} > ADD </button>
+                    <button 
+                        className="addBtn" onClick={() => this.props.addToList(el)} 
+                        > 
+                         ADD 
+                    </button>
                 </div>
             )
         })
         return (
             <div className="full_divForInventory"> 
+                <div className="searchBar">
+                    <input 
+                        className="searchInput"
+                        placeholder="search"
+                        onChange={(e) => this.handleSearch(e.target.value)} /> 
+                </div>
                 {showFullInventory}
             </div>
         )
