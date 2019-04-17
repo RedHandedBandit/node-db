@@ -26,7 +26,7 @@ class Inventory extends Component {
                     <div> 
                         <img className="img_inventory" src={el.image} alt="animal" /> 
                     </div>
-                    <button onClick={() => this.props.addToList(el)} > ADD </button>
+                    <button className="addBtn" onClick={() => this.props.addToList(el)} > ADD </button>
                 </div>
             )
         })

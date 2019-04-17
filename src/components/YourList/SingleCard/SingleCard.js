@@ -10,6 +10,12 @@ class SingleCard extends Component {
         }
     }
 
+    handleClosePopup = () => {
+        this.setState({
+            video: !this.state.video
+        })
+    }
+
     render(){
     return (
         
@@ -25,9 +31,9 @@ class SingleCard extends Component {
                 </header>
                 <div className="bulletPoints_yourList">
                     <div className="firstThree">
-                        <span className="bp_span"> Height: <mark> {this.props.height} </mark> </span>
-                        <span className="bp_span"> Weight: <mark> {this.props.weight} </mark> </span>
-                        <span className="bp_span"> Length: <mark> {this.props.length} </mark> </span>
+                        <span className="bp_span"> <mark className="height" > Height:</mark> {this.props.height} </span>
+                        <span className="bp_span"> <mark className="weight"> Weight: </mark> {this.props.weight} </span>
+                        <span className="bp_span"> <mark className="length"> Length: </mark> {this.props.length} </span>
                     </div>
                     <div className="secondThree"> 
                         <span className="bp_span"> <mark className="population">Population:</mark> {this.props.population} </span>
@@ -43,28 +49,31 @@ class SingleCard extends Component {
                 </div>
                 <footer className="all_btns">
                     {!this.props.editInfo ?
-                        <button onClick={() => this.props.handleEditInfoClick()}> EDIT </button> :
+                        <button className="editBtn"
+                            onClick={() => this.props.handleEditInfoClick()}> EDIT </button> :
                         <div> 
                             <textarea 
                                 onChange={(e) => this.props.updateAnimalClick(e.target.value)}
                                 />
-                            <button 
+                            <button className="submitBtn"
                                 onClick={() => this.props.submitNewAnimalInfo(this.props.id, this.props.updateInfo)}
                                 > 
                              SUBMIT 
                             </button>
                         </div>
                     }
-                    <button onClick={() => this.setState({
+                    <button className="playBtn"
+                        onClick={() => this.setState({
                         video: !this.state.video
                         })}
                         > PLAY 
                     </button>
-                    <button onClick={() => this.props.handleDeleteClick(this.props.id)}> 
+                    <button className="deleteBtn"
+                        onClick={() => this.props.handleDeleteClick(this.props.id)}> 
                          DELETE 
                     </button>
                 </footer>
-            {this.state.video ? <Video video={this.props.video} /> : null}
+            {this.state.video ? <Video handleClosePopup={this.handleClosePopup} video={this.props.video} /> : null}
             </div>
         
         )} 

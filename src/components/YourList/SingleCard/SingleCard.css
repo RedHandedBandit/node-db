@@ -2,7 +2,7 @@
     background-color: rgb(255, 255, 255, .8);
     width: 500px;
     margin: 15px;
-    height: 620px;
+    height: 670px;
     display: flex;
     flex-direction: column;
 	flex-wrap: nowrap;
@@ -45,14 +45,14 @@
 }
 
 .bulletsPoints_yourList {
-    border: solid black .5px;
+    /* border: solid black 1px; */
     padding: 5px;
     display: flex;
     height: 150px;
 }
 
 .firstThree {
-    border: solid black .5px;
+    /* border: solid black .5px; */
     padding: 5px;
     margin: 4px;
     display: flex;
@@ -63,7 +63,7 @@
 }
 
 .secondThree {
-    border: solid black .5px;
+    /* border: solid black .5px; */
     padding: 5px;
     margin: 4px;
     display: flex;
@@ -75,8 +75,8 @@
 
 .height {
     font-size: 17px;
-    background: none;
     font-weight: 600;
+    background: none;
 }
 
 .weight {
@@ -131,7 +131,7 @@
     margin: 10px;
 }
 
-button {
+.editBtn {
     border-radius: 5px;
     padding: 4px;
     font-size: 13px;
@@ -140,7 +140,70 @@ button {
     border: solid black .4px;
 }
 
-button:hover {
+.editBtn:hover {
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 13px;
+    width: 65px;
+    background-color: white;
+    -webkit-box-shadow: -1px 0px 15px 0px #000000; 
+    box-shadow: -1px 0px 15px 0px #000000;
+    cursor: pointer;
+    transition-duration: .4s;
+}
+
+.playBtn {
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 13px;
+    width: 65px;
+    background: none;
+    border: solid black .4px;
+}
+
+.playBtn:hover {
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 13px;
+    width: 65px;
+    background-color: white;
+    -webkit-box-shadow: -1px 0px 15px 0px #000000; 
+    box-shadow: -1px 0px 15px 0px #000000;
+    cursor: pointer;
+    transition-duration: .4s;
+}
+
+.submitBtn {
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 13px;
+    width: 65px;
+    background: none;
+    border: solid black .4px;
+}
+
+.submitBtn:hover {
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 13px;
+    width: 65px;
+    background-color: white;
+    -webkit-box-shadow: -1px 0px 15px 0px #000000; 
+    box-shadow: -1px 0px 15px 0px #000000;
+    cursor: pointer;
+    transition-duration: .4s;
+}
+
+.deleteBtn {
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 13px;
+    width: 65px;
+    background: none;
+    border: solid black .4px;
+}
+
+.deleteBtn:hover {
     border-radius: 5px;
     padding: 4px;
     font-size: 13px;
