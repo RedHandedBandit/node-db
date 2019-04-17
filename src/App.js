@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Inventory from './components/Inventory'
-import YourList from './components/YourList'
+import YourList from './components/YourList/YourList'
 import NavBar from './components/NavBar'
 import axios from 'axios'
 

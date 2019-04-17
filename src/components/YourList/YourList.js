@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import './YourList.css'
+import Video from './Video/Video'
 
 class YourList extends Component {
     constructor(props){
         super(props)
         this.state = {
             editInfo: false,
-            updateInfo: ''
+            updateInfo: '',
+            video: false
         }
     }
 
@@ -23,6 +25,12 @@ class YourList extends Component {
     handleDeleteClick = (id) => {
         console.log('handleDeleteClick id', id)
         this.props.deleteAnimal(id)
+    }
+
+    playClick = () => {
+        this.setState({
+            video: !this.state.video
+        })
     }
     
     
@@ -64,7 +72,7 @@ class YourList extends Component {
                             <button onClick={() => this.handleEditInfoClick()}> EDIT </button> :
                             <div> 
                                 <textarea 
-                                    onChange={(e) => this.updateAnimalClick(e.target.value)} 
+                                    onChange={(e) => this.updateAnimalClick(e.target.value)}
                                     />
                                 <button 
                                     onClick={() => this.props.submitNewAnimalInfo(el.id, this.state.updateInfo)}
@@ -73,11 +81,14 @@ class YourList extends Component {
                                 </button>
                             </div>
                         }
-                        <button> PLAY </button>
+                        <button onClick={() => this.setState({
+                            video: !this.state.video
+                        })}> PLAY </button>
                             <button onClick={() => this.handleDeleteClick(el.id)}> 
                                     DELETE 
                             </button> 
                     </footer>
+                    {this.state.video ? <Video video={el.video} /> : null}
                 </div>
             )
         })

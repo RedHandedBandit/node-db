@@ -2,13 +2,15 @@
     background-color: rgb(255, 255, 255, .8);
     width: 500px;
     margin: 15px;
-    height: 600px;
+    height: 620px;
     display: flex;
     flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: stretch;
-	align-content: stretch;
+    align-content: stretch;
+    -webkit-box-shadow: 0px 1px 8px 8px rgba(0,0,0,0.57); 
+    box-shadow: 0px 1px 8px 8px rgba(0,0,0,0.57);
 }
 
 .img_yourList {
@@ -105,4 +107,47 @@
     font-size: 17px;
     background: none;
     font-weight: 600;
+}
+
+.info_div {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.info_pContainer {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px;
+    line-height: 20px;
+}
+
+.all_btns {
+    display: flex;
+    flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+    align-content: center;
+    margin: 10px;
+}
+
+button {
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 13px;
+    width: 65px;
+    background: none;
+    border: solid black .4px;
+}
+
+button:hover {
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 13px;
+    width: 65px;
+    background-color: white;
+    -webkit-box-shadow: -1px 0px 15px 0px #000000; 
+    box-shadow: -1px 0px 15px 0px #000000;
+    cursor: pointer;
+    transition-duration: .4s;
 }
